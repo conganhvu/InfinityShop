@@ -1,0 +1,64 @@
+<html>
+
+<head>
+  <link href="/css/styles.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body class="customer">
+  <%- include('./_menu.ejs') %>
+  <%- include('./_inform.ejs') %>
+
+  <!-- Hero Area Start-->
+  <div class="slider-area ">
+    <div class="single-slider slider-height2 d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="hero-cap text-center">
+                        <h2>ProDuct Details</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero Area End-->
+  <!-- <div class="align-center">
+    <h2 class="text-center">PRODUCT DETAILS</h2> -->
+    <figure class="caption-right">
+      <img src="data:image/jpg;base64,<%=prod.image%>" width="600" height="600" style="margin-left: 500px;"/>
+      <figcaption>
+        <form action="./add2cart" method="POST">
+          <table style="font-weight: bold;font-size: x-large;margin-left: 100px;">
+            <tr>
+              <td align="right">ID:</td>
+              <td><%=prod._id%></td>
+            <tr>
+            <tr style="margin-top: 70px;">
+              <td align="right">Name:</td>
+              <td><%=prod.Name%></td>
+            <tr>
+            <tr style="margin-top: 70px;">
+              <td align="right">Price:</td>
+              <td><%=prod.Price%></td>
+            <tr>
+            <tr style="margin-top: 70px;">
+              <td align="right">Category:</td>
+              <td><%=prod.category.Name%></td>
+            <tr>
+            <tr style="margin-top: 70px;">
+              <td align="right">Quantity:</td>
+              <td><input type="number" name="txtQuantity" value="1" min="1" max="99" required /></td>
+            <tr>
+            <tr style="margin-top: 70px;">
+              <td><input type="hidden" name="txtID" value="<%=prod._id%>" /></td>
+              <td><input type="submit" value="ADD TO CART" /></td>
+            </tr>
+          </table>
+        </form>
+      </figcaption>
+    </figure>
+  </div>
+</body>
+<%- include('./footer.ejs') %>
+</html>
